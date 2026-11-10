@@ -1,0 +1,152 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  --bg: #f5f6f8;
+  --surface: #fff;
+  --ink: #252a34;
+  --muted: #7b8190;
+  --border: #e5e7ec;
+  --accent: #466b57;
+  --accent-soft: #edf4ef;
+  --bulma-primary-h: 146deg;
+  --bulma-primary-s: 21%;
+  --bulma-primary-l: 35%;
+}
+:root[data-theme='dark'] {
+  --bg: #161a20;
+  --surface: #1e232b;
+  --ink: #e0e5ed;
+  --muted: #9aa4b3;
+  --border: #333b47;
+  --accent: #91bba0;
+  --accent-soft: #283c30;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  min-width: 320px;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: var(--accent);
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 32px;
+  font-weight: 650;
+  letter-spacing: -1px;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 16px;
+  font-weight: 650;
+  color: var(--ink);
+}
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 550;
+}
+code {
+  background: none;
+  color: var(--muted);
+  padding: 0;
+}
+input,
+textarea,
+select {
+  color: var(--ink);
+}
+.input,
+.textarea,
+.button {
+  border-radius: 4px;
+  box-shadow: none;
+}
+.input,
+.textarea,
+select.input {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+.button {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+  font-weight: 500;
+}
+.button:hover {
+  border-color: var(--muted);
+  color: var(--ink);
+}
+.button.is-primary {
+  background: #466b57;
+  color: #fff;
+  border-color: #466b57;
+}
+.table {
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+}
+.table th,
+.table td {
+  color: var(--ink);
+  border-color: var(--border);
+  vertical-align: middle;
+}
+.table thead th {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  background: var(--bg);
+  border-width: 0 0 1px;
+}
+.table.is-hoverable tbody tr:hover {
+  background: var(--accent-soft);
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.input.is-small,
+.textarea.is-small,
+.button.is-small {
+  font-size: 0.875rem;
+}
